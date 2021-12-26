@@ -1,0 +1,24 @@
+<body>
+    <h1>Students studying <%= mid %></h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>GPA</th>
+        </tr>
+        <% students.forEach((student)=> { %>
+            <tr>
+                <td>
+                    <%= student.sid %>
+                </td>
+                <td>
+                    <%= student.name %>
+                </td>
+                <td>
+                    <%= student.gpa %>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+    <p><a href="/">Home</p>
+</body>

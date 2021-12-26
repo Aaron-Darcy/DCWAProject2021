@@ -1,0 +1,36 @@
+<body>
+    <h1>Students</h1>
+
+    <button type="button"><a href="/addStudent">Add Student</a></button><br><br>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>GPA</th>
+            <th>Action</th>
+        </tr>
+        <% students.forEach((student)=> { %>
+            <tr>
+                <td>
+                    <%= student.sid %>
+                </td>
+                <td>
+                    <%= student.name %>
+                </td>
+                <td>
+                    <%= student.gpa %>
+                </td>
+                <td><a href="/students/delete/<%= student.sid %>">Delete</a></td>
+            </tr>
+            <% }) %>
+    </table>
+
+    <p><a href="/">Home</p>
+</body>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
